@@ -6,7 +6,9 @@ from io import BytesIO
 
 # Load questions from JSON file
 def load_questions():
-    with open('dpquestion.json', 'r', encoding='utf-8') as f:
+    file_path = os.path.join(os.getcwd(), 'dpquestion.json')
+    print(f"Attempting to load file from: {file_path}")
+    with open(file_path, 'r') as f:
         data = json.load(f)
         return data['questions']  # Returns the questions array from the JSON
 
