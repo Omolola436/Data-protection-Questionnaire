@@ -7,7 +7,7 @@ import os
 
 # Load questions from JSON file
 def load_questions():
-    file_path = os.path.join(os.getcwd(), 'dpquestion.json')
+    file_path = os.path.join(os.getcwd(), 'questions.json')
     print(f"Attempting to load file from: {file_path}")
     with open(file_path, 'r') as f:
         data = json.load(f)
